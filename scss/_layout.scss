@@ -33,3 +33,7 @@ main {
 div {
   margin-bottom: calculateMargin(10px);
 }
+
+button {
+  background: var(--brand-white);
+}
