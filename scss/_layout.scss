@@ -5,7 +5,8 @@ $white: #eee;
 
 :root {
   --brand-white: #eee;
-  --screaming-green: #55ff55;
+  --water: #d9e2f7;
+  --rose: #fd469f;
 }
 
 h1, h2, h3 {
@@ -26,7 +27,6 @@ p {
 
 main {
   padding: 20px;
-  background: rgba(255, 0, 255, .2);
   height: 100vh;
 }
 
@@ -36,4 +36,37 @@ div {
 
 button {
   background: var(--brand-white);
+}
+
+textarea {
+  resize: none;
+}
+
+label,
+input:not([type=radio]),
+textarea {
+  display: block;
+  width: 100%;
+  outline: none;
+}
+
+input:not([type=radio]),
+textarea {
+  border: 2px solid var(--water);
+  transition: border-color 0.25s ease;
+  &:hover {
+    border-color: var(--rose);
+  }
+}
+
+input[type=radio] + label {
+  display: initial;
+}
+
+button[type=submit] {
+  
+}
+
+.field-row {
+
 }
