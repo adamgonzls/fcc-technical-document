@@ -1,12 +1,9 @@
-// Colors
-$bluefly: #0f1d32;
-$pinkish: #f14e53;
-$white: #eee;
-
 :root {
-  --brand-white: #eee;
+  --brand-white: #fffffe;
   --water: #d9e2f7;
   --rose: #fd469f;
+  --cod: #111;
+  --french-gray: #b9bcc1;
 }
 
 h1, h2, h3 {
@@ -26,8 +23,14 @@ p {
 }
 
 main {
-  padding: 20px;
-  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--rose);
+  border-radius: 12px;
+  padding: 1.5em;
+  max-width: 75%;
 }
 
 div {
@@ -42,7 +45,13 @@ textarea {
   resize: none;
 }
 
+label {
+  color: var(--cod);
+  font-size: .75em;
+}
+
 label,
+select,
 input:not([type=radio]):not([type=checkbox]),
 textarea {
   display: block;
@@ -51,8 +60,10 @@ textarea {
 }
 
 input:not([type=radio]):not([type=checkbox]),
+select,
 textarea {
-  border: 2px solid var(--water);
+  border: 2px solid var(--french-gray);
+  border-radius: 6px;
   transition: border-color 0.25s ease;
   &:hover,
   &:focus {
@@ -74,4 +85,17 @@ button[type=submit] {
     color: var(--brand-white);
     background: var(--rose);
   }
+}
+
+::placeholder {
+  font-size: .5em;
+}
+
+.page {
+  position: relative;
+  height: 100vh;
+}
+
+.fcc_hamburger {
+  background: red !important;
 }
