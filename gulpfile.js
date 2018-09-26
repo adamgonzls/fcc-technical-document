@@ -3,7 +3,7 @@ const browserSync   = require('browser-sync').create();
 const sass          = require('gulp-sass');
 const sourcemaps    = require('gulp-sourcemaps');
 const autoprefixer  = require('gulp-autoprefixer');
-// const ghPages       = require('gulp-gh-pages');
+const ghPages       = require('gulp-gh-pages');
 
 gulp.task('serve', ['sass'], function() {
   browserSync.init({
@@ -33,6 +33,11 @@ gulp.task('sass', function() {
   .pipe(sourcemaps.write())
   .pipe(gulp.dest('./public'))
   .pipe(browserSync.stream());
+});
+
+gulp.task('deploy', ['sass'], function () {
+  return gulp.src("./public/**/*")
+    .pipe(ghPages())
 });
 
 gulp.task('default', ['serve']);
