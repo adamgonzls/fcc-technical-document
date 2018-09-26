@@ -31,6 +31,7 @@ main {
   border-radius: 12px;
   padding: 1.5em;
   max-width: 75%;
+  background: var(--brand-white);
 }
 
 div {
@@ -62,7 +63,7 @@ textarea {
 input:not([type=radio]):not([type=checkbox]),
 select,
 textarea {
-  border: 2px solid var(--french-gray);
+  border: 2px solid var(--rose);
   border-radius: 6px;
   transition: border-color 0.25s ease;
   &:hover,
@@ -94,8 +95,5 @@ button[type=submit] {
 .page {
   position: relative;
   height: 100vh;
-}
-
-.fcc_hamburger {
-  background: red !important;
+  background: linear-gradient(var(--rose), #9198e5);
 }
