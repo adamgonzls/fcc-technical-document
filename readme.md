@@ -1,2 +1,2 @@
-# Playground
-Just a development environment to mess around with
+# Wireless Survey
+A customer survey built to collect customer and potential customer information.
