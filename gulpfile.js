@@ -10,8 +10,8 @@ gulp.task('serve', ['sass'], function() {
     files: "styles.css",
     // httpd-vhosts.conf users:
     open: "external",
-    host: "fcc-survey.test",
-    proxy: "fcc-survey.test/public",
+    host: "fcc-product-landing.test",
+    proxy: "fcc-product-landing.test/public",
     port: 3000
   });
 
