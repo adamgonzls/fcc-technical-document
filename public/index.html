@@ -17,69 +17,49 @@
 </head>
 <body>
   <div class="page">
-    <main>
-      <h1 id="title">Help Us Improve Service</h1>
-      <p id="description">Tell us about your current phone. This information will be used to add new features to our service</p>
-      <form id="survey-form" action="" method="post">
-        <div class="field-row">
-          <label id="name-label" for="name">Full Name:</label>
-          <input id="name" type="text" placeholder="First Name Last Name" required>
+    <div class="backgrounds">
+      <div class="top-background">top</div>
+      <div class="middle-background">middle</div>
+      <div class="bottom-background">bottom</div>
+    </div>
+    <div class="content-container">
+      <section>
+        <header id="header">
+          <img src="" alt="" id="header-img">
+          <nav id="nav-bar">
+            <span class="nav-link">Go Solar</span>
+            <span class="nav-link">Solar Plans</span>
+            <span class="nav-link">About Us</span>
+          </nav>
+        </header>
+      </section>
+      <main>
+        <h1 id="title">Subscribe to Our Newsletter</h1>
+        <p id="description">Tell us about your current phone. This information will be used to add new features to our service</p>
+        <form id="survey-form" action="" method="post">
+          <div class="field-row">
+            <label id="email-label" for="email">Email:</label>
+            <input id="email" type="email" placeholder="Email" required>
+          </div>
+          <button type="submit" id="submit">Submit</button>
+        </form>
+        <div class="info">
+          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis neque, similique asperiores esse quaerat magnam? Reiciendis excepturi, possimus adipisci dignissimos repellat delectus dicta fugiat quaerat libero amet cum, autem ullam!</div>
+          <div>Sequi odit labore ea natus laboriosam non, tempora accusantium repellat minima iusto voluptate, veniam, fugiat sunt deserunt quia quae, tempore laudantium voluptatibus! Doloribus praesentium sapiente, reprehenderit minima ex incidunt aperiam.</div>
+          <div>Sint ut, illum incidunt quia doloribus totam, aut vel magni consequuntur, deserunt atque alias perspiciatis delectus. Sint harum neque numquam saepe, illum, sapiente voluptate nostrum at, cum et quibusdam quas.</div>
+          <div>Vel eum quam, impedit iusto perspiciatis nostrum eveniet, dicta ipsa officiis libero harum voluptatibus repellendus error accusamus eos! Cupiditate voluptatum, voluptas facere reiciendis, ipsam laborum illo nam! Laboriosam, vero eligendi.</div>
+          <div>Recusandae laborum voluptate voluptatibus soluta non enim molestiae saepe dolore perspiciatis a laudantium explicabo accusantium, sequi commodi nam ut asperiores voluptatum quam quod officiis, qui eligendi. Odio, quibusdam laboriosam eos!</div>
+          <div>Reiciendis asperiores reprehenderit minima, consectetur, rerum deleniti odio libero debitis qui natus, exercitationem praesentium iusto soluta. Assumenda quis, cum fugiat quasi eum veritatis modi eos repellat harum, nisi aliquam eius.</div>
+          <div>Cum necessitatibus eos, adipisci libero placeat nostrum natus quas. Sapiente nesciunt perspiciatis corporis numquam similique nisi pariatur, ab aut fuga quasi velit, omnis esse fugit commodi fugiat animi at nobis!</div>
+          <div>Cupiditate nihil natus veniam non neque possimus eaque delectus maiores tenetur qui deserunt unde ipsam molestias totam expedita modi, in, consequatur dicta perferendis eligendi reprehenderit obcaecati ad itaque ut. Natus.</div>
+          <div>Consequuntur fuga quibusdam recusandae est eius quod voluptates perferendis accusantium magni illo corrupti voluptatibus, officia dolorem ab nihil quisquam, sit consectetur rem, minima voluptatum sed nam? Sit culpa deleniti qui.</div>
+          <div>Ducimus dignissimos molestiae expedita distinctio quas nam nulla accusamus nisi esse temporibus rem itaque neque soluta doloremque saepe, odio possimus natus provident sint veniam aperiam, dolor magnam aliquam. Quae, repellendus!</div>
         </div>
-        <div class="field-row">
-          <label id="email-label" for="email">Email:</label>
-          <input id="email" type="email" placeholder="Email" required>
-        </div>
-        <div class="field-row">
-          <label id="number-label" for="number">On Average, How Much Data Do You Use? (1GB - 10GB)</label>
-          <input id="number" type="number" placeholder="2" min="1" max="10">
-        </div>
-        <legend>Who Is Your Current Plan With?</legend>
-        <div>
-          <input id="att" name="radio" type="radio" value="att">
-          <label for="att">AT&amp;T</label>
-        </div>
-        <div>
-          <input id="projectfi" name="radio" type="radio" value="projectfi">
-          <label for="projectfi">Project Fi</label>
-        </div>
-        <div>
-          <input id="tmobile" name="radio" type="radio" value="tmobile">
-          <label for="tmobile">T-Mobile</label>
-        </div>
-        <div>
-          <input id="verizon" name="radio" type="radio" value="verizon">
-          <label for="verizon">Verizon</label>
-        </div>
-        <div class="field-row">
-          <label for="dropdown">What Phone Do You Have?</label>
-          <select name="dropdown" id="dropdown">
-            <option value="android">Android</option>
-            <option value="iphone">iOS (iPhone)</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div class="field-row">
-          <legend>What Features are Most Important to You? </legend>
-          <input id="app_store" type="checkbox" name="feature[]" value="app_store">
-          <label for="app_store">App Store</label>
-          <input id="imessage" type="checkbox" name="feature[]" value="imessage">
-          <label for="imessage">iMessage</label>
-          <input id="google_play" type="checkbox" name="feature[]" value="google_play">
-          <label for="google_play">Google Play</label>
-          <input id="screen_size" type="checkbox" name="feature[]" value="screen_size">
-          <label for="screen_size">Screen Size</label>
-        </div>
-        <div class="field-row">
-          <label for="textarea">Any Comments Regarding Your Current Phone or Carrier?</label>
-          <textarea id="textarea" name="textarea" cols="30" rows="5" placeholder="Textarea"></textarea>
-        </div>
-        <button type="submit" id="submit">Submit</button>
-      </form>
-    </main>
+        <a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page/">Requirements</a>
+      </main>
+    </div>
   </div>
-  <a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-survey-form">Requirements</a>
   <script src="index.js"></script>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js
-"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
