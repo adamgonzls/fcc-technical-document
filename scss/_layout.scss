@@ -22,19 +22,11 @@ p {
   line-height: 160%;
 }
 
-main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 2px solid var(--rose);
-  border-radius: 12px;
-  padding: 1.5em;
-  width: 90%;
+.content-container {
+  margin-bottom: 0;
+  width: 100%;
   background: var(--brand-white);
-  @include wider-than(600px) {
-    max-width: 75%;
-  }
+  box-shadow: 1px 30px 55px -10px black;
 }
 
 div {
@@ -97,6 +89,37 @@ button[type=submit] {
 
 .page {
   position: relative;
+  margin-bottom: 0;
+  padding: calculateMargin(80px);
+  position: relative;
   height: 100vh;
-  background: linear-gradient(var(--rose), #9198e5);
+  // background: linear-gradient(var(--rose), #9198e5);
+}
+
+.backgrounds {
+  margin-bottom: 0;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.top-background, {
+  margin-bottom: 0;
+  height: 600px;
+  width: 100%;
+  background: linear-gradient(to right, #FF4204, #FF8A05)
+}
+
+.middle-background {
+  margin-bottom: 0;
+  height: 300px;
+  background: #f8f8f8;
+}
+
+.bottom-background {
+  margin-bottom: 0;
+  height: 300px;
+  background: #232527;
 }
