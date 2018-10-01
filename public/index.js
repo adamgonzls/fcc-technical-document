@@ -1,5 +1,5 @@
 const salesRepContainer = document.getElementById('salesRep');
-const url = 'https://randomuser.me/api/?location=arizona&results=2';
+const url = 'https://randomuser.me/api/?nat=us';
 
 function createNode(element) {
   return document.createElement(element);
@@ -13,15 +13,15 @@ fetch(url)
   .then((response) => response.json()) 
   .then(function(data) 
   {
-    let authors = data.results;
-    return authors.map(function(author) {
+    let salesReps = data.results;
+    return salesReps.map(function(salesRep) {
       let div   = createNode('div'),
           img   = createNode('img'),
-          span  = createNode('span');
-      img.src = author.picture.medium;
-      span.innerHTML = `${author.name.first} ${author.name.last}`;
+          contactInfo  = createNode('div');
+      img.src = salesRep.picture.large;
+      contactInfo.innerHTML = `${salesRep.name.first} ${salesRep.name.last} ${salesRep.phone} ${salesRep.location.state}`;
       append(div, img);
-      append(div, span);
+      append(div, contactInfo);
       append(salesRepContainer, div);
     })
   })
