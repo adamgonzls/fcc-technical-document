@@ -1,9 +1,14 @@
 :root {
   --brand-white: #fffffe;
-  --water: #d9e2f7;
   --rose: #fd469f;
+  
   --cod: #111;
-  --french-gray: #b9bcc1;
+  --mountain-mist: #959595;
+  --alabaster: #f8f8f8;
+  --shark: #232527;
+  --vermillion: #ff4204;
+  --pizazz: #ff8a05
+
 }
 
 h1, h2, h3 {
@@ -11,15 +16,24 @@ h1, h2, h3 {
 }
 
 h1 {
-  @include fontSize(32px);
+  @include fontSize(40px);
+  font-weight: 600;
   margin-bottom: calculateMargin(20px);
+  color: var(--cod);
+}
+
+h2 {
+  @include fontSize(24px);
+  margin-bottom: calculateMargin(16px);
 }
 
 p {
-  @include fontSize(16px);
+  @include fontSize(14px);
   margin-top: 0;
   margin-bottom: calculateMargin(10px);
   line-height: 160%;
+  font-weight: 400;
+  color: var(--mountain-mist);
 }
 
 .content-container {
@@ -58,12 +72,13 @@ textarea {
 input:not([type=radio]):not([type=checkbox]),
 select,
 textarea {
-  border: 2px solid var(--rose);
-  border-radius: 6px;
+  border: none;
+  border-bottom: 2px solid var(--mountain-mist);
+  // border-radius: 6px;
   transition: border-color 0.25s ease;
   &:hover,
   &:focus {
-    border-color: var(--rose);
+    border-color: var(--pizazz);
   }
 }
 
@@ -73,13 +88,15 @@ input[type=checkbox] + label {
 }
 
 button[type=submit] {
-  border: 2px solid var(--rose);
-  border-radius: 10px;
-  padding: 5px;
+  border: none;
+  border-radius: 20px;
+  color: var(--brand-white);
+  background: var(--vermillion);
+  padding: 10px 20px;
   transition: background 0.25s ease;
   &:hover {
     color: var(--brand-white);
-    background: var(--rose);
+    background: var(--pizazz);
   }
 }
 
@@ -96,6 +113,7 @@ button[type=submit] {
   // background: linear-gradient(var(--rose), #9198e5);
 }
 
+// maybe use flexbox for backgrounds
 .backgrounds {
   margin-bottom: 0;
   z-index: -1;
@@ -109,17 +127,21 @@ button[type=submit] {
   margin-bottom: 0;
   height: 600px;
   width: 100%;
-  background: linear-gradient(to right, #FF4204, #FF8A05)
+  background: linear-gradient(to right, var(--vermillion), #FF8A05)
 }
 
 .middle-background {
   margin-bottom: 0;
   height: 300px;
-  background: #f8f8f8;
+  background: var(--alabaster);
 }
 
 .bottom-background {
   margin-bottom: 0;
-  height: 300px;
-  background: #232527;
+  height: 400px;
+  background: var(--shark);
+}
+
+.form-container {
+
 }
