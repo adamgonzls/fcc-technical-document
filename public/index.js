@@ -1,5 +1,5 @@
 const salesRepContainer = document.getElementById('salesRep');
-const url = 'https://randomuser.me/api/?nat=us';
+const url = 'https://randomuser.me/api/?results=5&nat=us&gender=male&location=vermont';
 
 function createNode(element) {
   return document.createElement(element);
@@ -13,6 +13,7 @@ fetch(url)
   .then((response) => response.json()) 
   .then(function(data) 
   {
+    console.log(data);
     let salesReps = data.results;
     return salesReps.map(function(salesRep) {
       let div   = createNode('div'),
