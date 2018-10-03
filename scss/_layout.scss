@@ -136,11 +136,33 @@ button[type=submit] {
 
 #header {
   display: flex;
+  margin-bottom: calculateMargin(40px);
   > * {
     flex: 1;
   }
   #nav-bar {
     text-align: end;
+    .nav-link {
+      margin-right: calculateMargin(40px);
+    }
+  }
+}
+
+.hero {
+  
+  .hero-row {
+    position: relative;
+    img {
+      max-width: 70%;
+    }
+    .hero-text {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin-bottom: 0;
+      padding: calculateMargin(40px);
+      background: var(--brand-white);
+    }
   }
 }
 
