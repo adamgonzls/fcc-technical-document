@@ -37,6 +37,10 @@ div {
   margin-bottom: calculateMargin(10px);
 }
 
+section {
+  margin-bottom: calculateMargin(100px);
+}
+
 textarea {
   resize: none;
 }
@@ -48,14 +52,14 @@ label {
 
 label,
 select,
-input:not([type=radio]):not([type=checkbox]),
+input:not([type=radio]):not([type=checkbox]):not([type=submit]),
 textarea {
   display: block;
   width: 100%;
   outline: none;
 }
 
-input:not([type=radio]):not([type=checkbox]),
+input:not([type=radio]):not([type=checkbox]):not([type=submit]),
 select,
 textarea {
   border: none;
@@ -73,7 +77,8 @@ input[type=checkbox] + label {
 }
 
 button,
-button[type=submit] {
+button[type=submit],
+input[type=submit] {
   border: none;
   border-radius: 20px;
   color: var(--brand-white);
@@ -108,7 +113,7 @@ button[type=submit] {
 // maybe use flexbox for backgrounds
 .backgrounds {
   margin-bottom: 0;
-  z-index: -1;
+  z-index: -2;
   position: absolute;
   top: 0;
   left: 0;
@@ -119,7 +124,7 @@ button[type=submit] {
   margin-bottom: 0;
   height: 600px;
   width: 100%;
-  background: linear-gradient(to right, var(--vermillion), #FF8A05)
+  background: linear-gradient(to right, var(--vermillion), 70%, var(--pizazz));
 }
 
 .middle-background {
@@ -137,22 +142,52 @@ button[type=submit] {
 #header {
   display: flex;
   margin-bottom: calculateMargin(40px);
+  margin-right: calculateMargin(80px);
+  margin-left: calculateMargin(80px);
+  padding-top: calculateMargin(40px);
   > * {
     flex: 1;
   }
   #nav-bar {
-    text-align: end;
+    // text-align: end;
+    display: flex;
+    justify-content: flex-end;
     .nav-link {
+      align-self: center;
       margin-right: calculateMargin(40px);
+      font-weight: 400;
+      color: var(--mountain-mist);
+      &:hover {
+        color: var(--cod);
+      }
+      &:first-of-type {
+        color: var(--cod);
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+      a {
+        align-self: center;
+      }
     }
   }
 }
 
 .hero {
-  
+  position: relative;
   .hero-row {
     position: relative;
+    .color-block {
+      position: absolute;
+      right: 0;
+      top: 15%;
+      background: linear-gradient(to left, var(--vermillion) 59%, var(--pizazz));
+      width: 60%;
+      height: 500px;
+      z-index: 0;
+    }
     img {
+      display: block;
       max-width: 70%;
     }
     .hero-text {
@@ -160,8 +195,26 @@ button[type=submit] {
       right: 0;
       bottom: 0;
       margin-bottom: 0;
-      padding: calculateMargin(40px);
+      margin-right: calculateMargin(80px);
+      padding: calculateMargin(85px) calculateMargin(60px) calculateMargin(60px) calculateMargin(70px);
+      width: 40%;
       background: var(--brand-white);
+      // background: green;
+      h1 {
+        margin-bottom: calculateMargin(80px);
+      }
+      > div {
+        > * {
+          display: inline-block;
+        }
+        p {
+          margin-bottom: 0;
+          width: 60%;
+        }
+        button {
+          vertical-align: top;
+        }
+      }
     }
   }
 }
