@@ -1,5 +1,5 @@
 const salesRepContainer = document.getElementById('salesRep');
-const url = 'https://randomuser.me/api/?results=5&nat=us&gender=male&location=vermont';
+const url = 'https://randomuser.me/api/?results=5&nat=us';
 
 function createNode(element) {
   return document.createElement(element);
@@ -20,7 +20,7 @@ fetch(url)
           img   = createNode('img'),
           contactInfo  = createNode('div');
       img.src = salesRep.picture.large;
-      contactInfo.innerHTML = `${salesRep.name.first} ${salesRep.name.last} ${salesRep.phone} ${salesRep.location.state}`;
+      contactInfo.innerHTML = `${salesRep.name.first} ${salesRep.name.last} ${salesRep.phone} ${salesRep.location.city} ${salesRep.location.state}`;
       append(div, img);
       append(div, contactInfo);
       append(salesRepContainer, div);
