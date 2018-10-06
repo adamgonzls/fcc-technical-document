@@ -1,5 +1,5 @@
 const salesRepContainer = document.getElementById('salesRep');
-const url = 'https://randomuser.me/api/?results=5&nat=us';
+const url = 'https://randomuser.me/api/?results=1&nat=us';
 
 function createNode(element) {
   return document.createElement(element);
