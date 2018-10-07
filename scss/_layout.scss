@@ -63,7 +63,7 @@ input:not([type=radio]):not([type=checkbox]):not([type=submit]),
 select,
 textarea {
   border: none;
-  border-bottom: 2px solid var(--mountain-mist);
+  // border-bottom: 2px solid var(--mountain-mist);
   transition: border-color 0.25s ease;
   &:hover,
   &:focus {
@@ -123,6 +123,21 @@ input[type=submit] {
   }
 }
 
+.field-row {
+  > div {
+    margin-bottom: 0;
+    @include wider-than (600px) {
+      display: inline-block;
+      width: calc(50% - 1.5em);
+      margin-right: 1em;
+      &:last-child {
+        width: 50%;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
 ::placeholder {
   font-size: .5em;
 }
@@ -142,7 +157,6 @@ input[type=submit] {
   box-shadow: 1px 30px 55px -10px black;
 }
 
-// maybe use flexbox for backgrounds
 .backgrounds {
   z-index: -2;
   position: absolute;
@@ -152,13 +166,13 @@ input[type=submit] {
 }
 
 .top-background, {
-  height: 750px;
+  height: 850px;
   width: 100%;
   background: linear-gradient(to right, var(--vermillion), 70%, var(--pizazz));
 }
 
 .middle-background {
-  height: 1100px;
+  height: 1400px;
   background: var(--alabaster);
 }
 
@@ -179,7 +193,7 @@ input[type=submit] {
   #nav-bar {
     display: flex;
     justify-content: flex-end;
-    .nav-link {
+    > span {
       align-self: center;
       margin-right: calculateMargin(40px);
       font-weight: 400;
@@ -290,21 +304,67 @@ input[type=submit] {
   }
 }
 
+.video-section {
+  .video-text {
+    padding-top: calculateMargin(90px);
+    padding-left: calculateMargin(90px);
+  }
+}
+
 .sales-section {
+  margin-bottom: 0;
   .sales-text {
     margin-top: calculateMargin(20px);
+    h1 {
+      margin-bottom: calculateMargin(60px);
+      width: 90%;
+    }
   }
-  h1 {
-    margin-bottom: calculateMargin(60px);
+  #salesRep {
+    padding-top: calculateMargin(40px);
+    padding-bottom: calculateMargin(40px);
+    background: linear-gradient(to right, var(--vermillion), 70%, var(--pizazz));
+    .sales-card {
+      margin: 0 auto;
+      text-align: center;
+      font-weight: 400;
+      width: 50%;
+      color: var(--alabaster);
+      img {
+        margin-top: calculateMargin(5px);
+        margin-bottom: calculateMargin(5px);
+        border-radius: 50%;
+        border: 2px solid var(--alabaster);
+      }
+      h2 {
+        margin-bottom: 0;
+      }
+      > span {
+        display: block;
+        margin-bottom: calculateMargin(5px);
+      }
+    }
   }
 }
-#salesRep {
-  padding-top: calculateMargin(80px);
-  padding-bottom: calculateMargin(80px);
-  padding-left: calculateMargin(80px);
-  background: linear-gradient(to right, var(--vermillion), 70%, var(--pizazz));
-}
+
 
 .contact-section {
   background: var(--black-russian);
+  padding-top: calculateMargin(140px);
+  padding-bottom: calculateMargin(140px);
+  .form-container {
+    margin: 0 auto;
+    width: 50%;
+    h1 {
+      color: var(--alabaster);
+    }
+    #form {
+      label {
+        color: var(--alabaster);
+      }
+      #email {
+        // width: 50%;
+      }
+    }
+  }
 }
