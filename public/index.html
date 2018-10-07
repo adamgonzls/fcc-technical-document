@@ -26,9 +26,9 @@
       <header id="header">
         <span><img src="images/solarcloud-logo.jpg" alt="SolarCloud logo" id="header-img"></span>
         <nav id="nav-bar">
-          <span class="nav-link"><a href="">Go Solar</a></span>
-          <span class="nav-link"><a href="">Solar Plans</a></span>
-          <span class="nav-link"><a href="#salesRep">Contact Us</a></span>
+          <span><a class="nav-link" href="#email">Go Solar</a></span>
+          <span><a class="nav-link" href="#value-proposition">About Solar</a></span>
+          <span><a class="nav-link" href="#salesRep">Contact Us</a></span>
         </nav>
       </header>
       <main>
@@ -45,7 +45,7 @@
             </div>
           </div>
         </section>
-        <section class="value-section media-row page-content-padding-left">
+        <section id="value-proposition" class="value-section media-row page-content-padding-left">
           <div class="value-text">
             <h1>Why use SolarCloud?</h1>
             <p>SolarCloud adds virtual energy storage to your PV system. Access your saved energy during the next heat wave or when a storm knocks out your neighborhood's power. We’re able to offset expensive electricity prices because our solar panels produce energy much more efficiently than traditional utilities. You also save money by paying for power at a rate that’s lower than what your utility can provide.</p>
@@ -64,6 +64,14 @@
             </div>
           </div>
         </section>
+        <section class="video-section media-row page-content-padding-left">
+          <div class="video-container">
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/UJ8XW9AgUrw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="video-text">
+            <h1>How does it work?</h1>
+          </div>
+        </section>
         <section class="sales-section media-row page-content-padding-left">
           <div class="sales-text">
             <h1>Want to Order a PV solution? Contact Your Local SolarCloud Rep</h1>
@@ -73,13 +81,17 @@
         </section>
         <section class="contact-section">
           <div class="form-container">
-            <h2>Sign Up for Our Newsletter</h2>
+            <h1>Sign Up for Our Newsletter</h1>
             <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
               <div class="field-row">
-                <label id="email-label" for="email">Email:</label>
-                <input name="email" id="email" type="email" placeholder="Email" required>
+                <div>
+                  <label id="email-label" for="email">Email:</label>
+                  <input name="email" id="email" type="email" placeholder="Email" required>
+                </div>
+                <div>
+                  <input id="submit" type="submit">
+                </div>
               </div>
-              <input id="submit" type="submit">
             </form>
           </div>
           <a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page/">Requirements</a>
