@@ -1,13 +1,9 @@
 const salesRepContainer = document.getElementById('salesRep');
 const url = 'https://randomuser.me/api/?results=1&nat=us';
 
-function createNode(element) {
-  return document.createElement(element);
-}
+const titles = ["energy consultant", "technical sales representative", "solar consultant", "solar sales specialist", "solar energy consultant", "account manager", "solar sales engineer"];
 
-function append(parent, el) {
-  return parent.appendChild(el);
-}
+const randomTitle = titles[Math.floor(Math.random() * titles.length)];
 
 fetch(url)
   .then((response) => response.json()) 
@@ -16,14 +12,17 @@ fetch(url)
     console.log(data);
     let salesReps = data.results;
     return salesReps.map(function(salesRep) {
-      let div   = createNode('div'),
-          img   = createNode('img'),
-          contactInfo  = createNode('div');
-      img.src = salesRep.picture.large;
-      contactInfo.innerHTML = `${salesRep.name.first} ${salesRep.name.last} ${salesRep.phone} ${salesRep.location.city} ${salesRep.location.state}`;
-      append(div, img);
-      append(div, contactInfo);
-      append(salesRepContainer, div);
+      const markup = `
+        <div class="sales-card">
+          <h2>${salesRep.name.first} ${salesRep.name.last}</h2>
+          <span>${randomTitle}</span>
+          <img src="${salesRep.picture.large}" alt="${salesRep.name.first} ${salesRep.name.last}" />
+          <span>${salesRep.location.city}, ${salesRep.location.state}</span>
+          <span>${salesRep.phone}</span>
+          <span>${salesRep.email}</span>
+        </div>
+      `;
+      document.getElementById('salesRep').innerHTML = markup;
     })
   })
   .catch(function(error) {
