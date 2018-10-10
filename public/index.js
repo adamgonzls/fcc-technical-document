@@ -22,26 +22,32 @@ const titles = ["energy consultant", "technical sales representative", "solar co
 
 const randomTitle = titles[Math.floor(Math.random() * titles.length)];
 
-fetch(url)
-  .then((response) => response.json()) 
-  .then(function(data) 
-  {
-    console.log(data);
-    let salesReps = data.results;
-    return salesReps.map(function(salesRep) {
-      const markup = `
-        <div class="sales-card">
-          <h2>${salesRep.name.first} ${salesRep.name.last}</h2>
-          <span>${randomTitle}</span>
-          <img src="${salesRep.picture.large}" alt="${salesRep.name.first} ${salesRep.name.last}" />
-          <span>${salesRep.location.city}, ${salesRep.location.state}</span>
-          <span>${salesRep.phone}</span>
-          <span>${salesRep.email}</span>
-        </div>
-      `;
-      document.getElementById('salesRep').innerHTML = markup;
+function requestData() {
+  fetch(url)
+    .then((response) => response.json()) 
+    .then(function(data) 
+    {
+      console.log(data);
+      let salesReps = data.results;
+      return salesReps.map(function(salesRep) {
+        const markup = `
+          <div class="sales-card">
+            <h2>${salesRep.name.first} ${salesRep.name.last}</h2>
+            <span>${randomTitle}</span>
+            <img src="${salesRep.picture.large}" alt="${salesRep.name.first} ${salesRep.name.last}" />
+            <span>${salesRep.location.city}, ${salesRep.location.state}</span>
+            <span>${salesRep.phone}</span>
+            <span>${salesRep.email}</span>
+          </div>
+        `;
+        document.getElementById('salesRep').innerHTML = markup;
+      })
     })
-  })
-  .catch(function(error) {
-    console.log(error);
-  });
+    .catch(function(error) {
+      console.log(error);
+    });
+}
+
+const requestButton = document.getElementById("requestRep");
+requestButton.addEventListener("click", requestData);
+// requestData();
