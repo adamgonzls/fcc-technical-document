@@ -114,13 +114,18 @@ input[type=submit] {
 }
 
 .page-content-padding-left {
-  padding-left: calculateMargin(80px);
+  padding-left: calculateMargin(40px);
+  @include wider-than(800px) {
+    padding-left: calculateMargin(80px);
+  }
 }
 
 .media-row {
-  display: flex;
-  > div {
-    flex: 1;
+  @include wider-than(800px) {
+    display: flex;
+    > div {
+      flex: 1;
+    }
   }
 }
 
@@ -145,9 +150,12 @@ input[type=submit] {
 
 .page {
   position: relative;
-  padding: calculateMargin(80px);
+  padding: calculateMargin(20px);
   position: relative;
   height: 100vh;
+  @include wider-than(1000px) {
+    padding: calculateMargin(80px);
+  }
 }
 
 .content-container {
@@ -185,21 +193,33 @@ input[type=submit] {
 #header {
   background: var(--brand-white);
   display: flex;
-  padding-bottom: calculateMargin(40px);
-  padding-right: calculateMargin(80px);
-  padding-left: calculateMargin(80px);
-  padding-top: calculateMargin(40px);
+  padding: calculateMargin(10px) calculateMargin(10px);
+  @include wider-than(600px) {
+    padding: calculateMargin(20px) calculateMargin(60px);
+  }
+  @include wider-than(800px) {
+    padding: calculateMargin(40px) calculateMargin(80px);
+  }
   > * {
     flex: 1;
+  }
+  > span {
+    display: none;
+    @include wider-than(500px) {
+      display: initial;
+    }
   }
   #nav-bar {
     display: flex;
     justify-content: flex-end;
     > span {
       align-self: center;
-      margin-right: calculateMargin(40px);
+      margin-right: calculateMargin(20px);
       font-weight: 400;
       color: var(--mountain-mist);
+      @include wider-than(550px) {
+        margin-right: calculateMargin(40px);
+      }
       &:hover {
         color: var(--cod);
       }
@@ -246,15 +266,23 @@ input[type=submit] {
       z-index: 2;
     }
     .text-block {
-      grid-column: 7 / 13;
-      grid-row: 4 / 12;
+      grid-column: 6 / 13;
+      grid-row: 1 / 12;
       z-index: 3;
-      margin-right: calculateMargin(80px);
-      padding: calculateMargin(85px) calculateMargin(60px) calculateMargin(60px) calculateMargin(70px);
+      padding: calculateMargin(45px) calculateMargin(20px) calculateMargin(20px) calculateMargin(30px);
       background: var(--brand-white);
       display: flex;
       flex-flow: column;
       justify-content: space-between;
+      @include wider-than(800px) {
+        grid-column: 7 / 13;
+        grid-row: 4 / 12;
+        padding: calculateMargin(65px) calculateMargin(40px) calculateMargin(40px) calculateMargin(50px);
+      }
+      @include wider-than(1000px) {
+        margin-right: calculateMargin(80px); 
+        padding: calculateMargin(85px) calculateMargin(60px) calculateMargin(60px) calculateMargin(70px);
+      }
       h1 {
         margin-bottom: 0;
       }
@@ -265,60 +293,120 @@ input[type=submit] {
         }
         p {
           margin-bottom: 0;
-          width: 60%;
+          @include wider-than(800px) {
+            width: 50%;
+            width: 60%;
+          }
         }
-        button {
-          position: absolute;
-          top: 50%;
-          right: 0;
-          transform: translateY(-50%);
+        button {          
+          @include wider-than(800px) {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+          }
         }
       }
     }
   }
 }
 
-.value-section {
-  .value-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-  h1 {
-    width: 50%;
-  }
-  > div {
-    > p {
-      width: 75%;
-      margin-bottom: calculateMargin(60px);
+section {
+  &.value-section {
+    // display: initial;
+    @include wider-than(900px) {
+      display: flex;
     }
-  }
-  .feature-cards {
-    display: flex;
-    text-align: center;
+    .value-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    h1 {
+      width: 50%;
+    }
     > div {
-      margin: calculateMargin(10px);
-      padding: 45px 35px 35px 35px;
-      height: 200px;
-      width: 200px;
-      box-shadow: 0px 8px 20px -4px var(--mountain-mist);
-      span {
-        font-weight: 600;
+      > p {
+        width: 75%;
+        margin-bottom: calculateMargin(60px);
+      }
+      button {
+        &+button {
+          margin-top: calculateMargin(10px);
+          margin-left: 0;
+          @include wider-than(1130px) {
+            margin-top: 0;
+            margin-left: calculateMargin(10px);
+          }
+        }
       }
     }
-    &:last-child {
-      margin-left: calculateMargin(100px);
+    .feature-cards {
+      display: inline-block;
+      @include wider-than(800px) {
+        display: flex;
+        text-align: center;  
+      }
       > div {
-        margin-bottom: 0;
+        margin: calculateMargin(10px);
+        padding: 45px 35px 35px 35px;
+        height: 150px;
+        width: 150px;
+        box-shadow: 0px 8px 20px -4px var(--mountain-mist);
+        @include wider-than(800px) {
+          // padding: 45px 35px 35px 35px;
+          height: 200px;
+          width: 200px;
+        }
+        span {
+          font-weight: 600;
+        }
+      }
+      &:last-child {
+        margin-left: calculateMargin(100px);
+        > div {
+          margin-bottom: 0;
+        }
       }
     }
   }
 }
 
-.video-section {
-  .video-text {
-    padding-top: calculateMargin(90px);
-    padding-left: calculateMargin(90px);
+section {
+  &.video-section {
+    display: initial;
+    @include wider-than(900px) {
+      display: flex;
+    }
+    @include less-than(800px) {
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .video-text {
+      padding-top: calculateMargin(50px);
+      padding-left: calculateMargin(50px);
+      @include wider-than(800px) {
+        padding-top: calculateMargin(70px);
+        padding-left: calculateMargin(70px);
+      }
+      @include wider-than(1000px) {
+        padding-top: calculateMargin(90px);
+        padding-left: calculateMargin(90px);
+      }
+    }
   }
 }
 
