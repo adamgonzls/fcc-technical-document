@@ -480,3 +480,9 @@ section {
     }
   }
 }
+
+.example-text {
+  &--upper {
+    text-transform: uppercase;
+  }
+}
