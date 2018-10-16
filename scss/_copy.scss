@@ -2,11 +2,15 @@ h1, h2, h3 {
   margin: 0;
 }
 
-h1 {
+header {
   @include fontSize(40px);
-  font-weight: 600;
   margin-bottom: calculateMargin(20px);
   color: var(--cod);
+}
+
+h1 {
+  @include fontSize(30px);
+  margin-bottom: calculateMargin(20px);
 }
 
 h2 {
@@ -25,8 +29,13 @@ p {
   line-height: 160%;
   font-weight: 400;
   color: var(--mountain-mist);
+  > code {
+    display: inline-block;
+  }
 }
 
 code {
+  display: block;
   @include fontSize(14px);
+  margin-bottom: calculateMargin(20px);
 }
