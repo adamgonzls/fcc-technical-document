@@ -17,82 +17,114 @@
 </head>
 <body>
   <div class="page-container">
-    <nav>
-      <ul>
-        <li id="tone">Tone</li>
-        <li id="brading">Branding</li>
-        <li id="color">Color</li>
-        <li id="spacing">Spacing</li>
-        <li id="typography">Typography</li>
-      </ul>
-    </nav>
-    <main id="main-doc">
-      <section id="tone_section" class="main-section">
-        <header>Tone</header>
-        <p>SolarCloud UI tries to have a clean tone overall. The styles should match the UI, which represents emergent technology, cleanliness, and education.</p>
-      </section>
-      <section id="branding_section" class="main-section">
-        <header>Branding</header>
-      </section>
-      <section id="color_section" class="main-section">
-        <header>Color</header>
-        <p>This is the primary color palette.</p>
-        <div class="color-block-container">
-          <div>
-            <span>brand-white</span>
-            <code>#fffffe;</code>
+    <header id="header">
+      <span><img src="images/solarcloud-logo.jpg" alt="SolarCloud logo" id="header-img"></span>
+      <nav id="nav-bar">
+        <span><a class="nav-link" href="https://adamgonzls.github.io/fcc-product-landing/">Go Solar</a></span> 
+      </nav>
+    </header>
+    <div class="content-container">
+      <nav class="main-nav">
+        <ul>
+          <li id="tone"><a href="#tone_section">Tone</a></li>
+          <li id="brading"><a href="#branding_section">Branding</a></li>
+          <li id="color"><a href="#color_section">Color</a></li>
+          <li id="spacing"><a href="#spacing_section">Spacing</a></li>
+          <li id="typography"><a href="#typography_section">Typography</a></li>
+          <li id="components"><a href="#components_section">Components</a></li>
+        </ul>
+      </nav>
+      <div class="spacer"></div>
+      <main id="main-doc">
+        <section id="tone_section" class="main-section">
+          <header>Tone</header>
+          <p>SolarCloud UI tries to have a clean tone overall. The styles should match the UI, which represents emergent technology, cleanliness, and education.</p>
+        </section>
+        <section id="branding_section" class="main-section">
+          <header>Branding</header>
+          <h1>Logo Guidelines</h1>
+          <ul>
+            <li>Don’t add additional shadows or lighting effects, modify colors, or change the orientation.</li>
+            <li>When positioning the logo beside other elements, please ensure there is sufficient outer padding.</li>
+          </ul>
+        </section>
+        <section id="color_section" class="main-section">
+          <header>Color</header>
+          <p>This is the primary color palette.</p>
+          <div class="tiles">
+            <div>
+              <span>brand-white</span>
+              <code>#fffffe;</code>
+            </div>
+            <div>
+              <span>cod</span>
+              <code>#111111;</code>
+            </div>
+            <div>
+              <span>black-russian</span>
+              <code>#242528;</code>
+            </div>
+            <div>
+              <span>mountain-mist</span>
+              <code>#959595;</code>
+            </div>
+            <div>
+              <span>alabaster</span>
+              <code>#f8f8f8;</code>
+            </div>
+            <div>
+              <span>shark</span>
+              <code>#232527;</code>
+            </div>
+            <div>
+              <span>vermillion</span>
+              <code>#ff4204;</code>
+            </div>
+            <div>
+              <span>pizazz</span>
+              <code>#ff8a05;</code>
+            </div>
           </div>
+        </section>
+        <section id="spacing_section" class="main-section">
+          <header>Spacing</header>
+          <p>Spacing can be applied using margin or padding. There are several available spacing sizes. Both margin and padding share the same predefined scale.</p>
           <div>
-            <span>cod</span>
-            <code>#111111;</code>
+            <p>Spacing after <code>&lt;section&gt;&lt;/section&gt;</code> should normally be 100px.</p>
           </div>
-          <div>
-            <span>black-russian</span>
-            <code>#242528;</code>
+        </section>
+        <section id="typography_section" class="main-section">
+          <header>Typography</header>
+          <p>SolarCloud's font family is Open Sans.</p>
+          <code>font: 100% 'Open Sans', sans-serif, Arial;</code>
+          <div class="example-text example-text--upper">
+            <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span><span>i</span><span>j</span><span>k</span><span>l</span><span>m</span><span>n</span><span>o</span><span>p</span><span>q</span><span>r</span><span>s</span><span>t</span><span>u</span><span>v</span><span>w</span><span>x</span><span>y</span><span>z</span>
           </div>
-          <div>
-            <span>mountain-mist</span>
-            <code>#959595;</code>
+          <div class="example-text">
+            <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span><span>i</span><span>j</span><span>k</span><span>l</span><span>m</span><span>n</span><span>o</span><span>p</span><span>q</span><span>r</span><span>s</span><span>t</span><span>u</span><span>v</span><span>w</span><span>x</span><span>y</span><span>z</span>
           </div>
-          <div>
-            <span>alabaster</span>
-            <code>#f8f8f8;</code>
+          <div class="example-text">0123456789</div>
+          <p></p>
+        </section>
+        <section id="components_section" class="main-section">
+          <header>Components</header>
+          <div class="components-container">
+            <div>
+              <span>Default Button</span>
+              <button>See More</button>
+            </div>
+            <div>
+              <span>Sunburst Button</span>
+              <button class="--red-background">Join SolarCloud</button>
+            </div>
+            <div>
+              <span>Empty Button</span>
+              <button class="--cod-text --weight-600 --white-background --mountain-mist-border">Go to PV Solutions</button>
+            </div>
           </div>
-          <div>
-            <span>shark</span>
-            <code>#232527;</code>
-          </div>
-          <div>
-            <span>vermillion</span>
-            <code>#ff4204;</code>
-          </div>
-          <div>
-            <span>pizazz</span>
-            <code>#ff8a05;</code>
-          </div>
-        </div>
-      </section>
-      <section id="Spacing_section" class="main-section">
-        <header>Spacing</header>
-        <p>Spacing can be applied using margin or padding. There are several available spacing sizes. Both margin and padding share the same predefined scale.</p>
-        <div>
-          <p>Spacing after <code>&lt;section&gt;&lt;/section&gt;</code> should normally be 100px.</p>
-        </div>
-      </section>
-      <section id="Typography_section" class="main-section">
-        <header>Typography</header>
-        <p>SolarCloud's font family is Open Sans</p>
-        <code>font: 100% 'Open Sans', sans-serif, Arial;</code>
-        <div class="example-text--upper">
-          <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span><span>i</span><span>j</span><span>k</span><span>l</span><span>m</span><span>n</span><span>o</span><span>p</span><span>q</span><span>r</span><span>s</span><span>t</span><span>u</span><span>v</span><span>w</span><span>x</span><span>y</span><span>z</span>
-        </div>
-        <div class="example-text">
-          <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span><span>i</span><span>j</span><span>k</span><span>l</span><span>m</span><span>n</span><span>o</span><span>p</span><span>q</span><span>r</span><span>s</span><span>t</span><span>u</span><span>v</span><span>w</span><span>x</span><span>y</span><span>z</span>
-        </div>
-        <div class="example-test">0123456789</div>
-        <p></p>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
   </div>
   <div class="page">
     <div class="backgrounds">
@@ -101,14 +133,7 @@
       <div class="bottom-background"></div>
     </div>
     <div class="content-container">
-      <header id="header">
-        <span><img src="images/solarcloud-logo.jpg" alt="SolarCloud logo" id="header-img"></span>
-        <nav id="nav-bar">
-          <span><a class="nav-link" href="#email">Go Solar</a></span>
-          <span><a class="nav-link" href="#value-proposition">About Solar</a></span>
-          <span><a class="nav-link" href="#salesRep">Contact Us</a></span>
-        </nav>
-      </header>
+      
       <main>
         <section class="hero">
           <div class="hero-row">
@@ -128,7 +153,7 @@
             <h1>Why use SolarCloud?</h1>
             <p>SolarCloud adds virtual energy storage to your PV system. Access your saved energy during the next heat wave or when a storm knocks out your neighborhood's power. We’re able to offset expensive electricity prices because our solar panels produce energy much more efficiently than traditional utilities. You also save money by paying for power at a rate that’s lower than what your utility can provide.</p>
             <div>
-              <button class="--red-background">Join SolarCloud</button><button class="--cod-text --weight-600 --white-background --mountain-mist-border">Go to PV Solutions</button>
+              
             </div>
           </div>
           <div>
