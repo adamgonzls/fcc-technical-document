@@ -1,6 +1,6 @@
 const header = document.querySelector('#header');
 const headerTop = header.offsetTop;
-const headerContainer = document.querySelector('.content-container');
+const headerContainer = document.querySelector('.page-container');
 
 function stickyNavigation() {
   if (window.scrollY >= headerTop) {
