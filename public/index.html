@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SolarCloud</title>
+  <title>SolarCloud Design Guidelines</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
@@ -25,34 +25,37 @@
     </header>
     <div class="content-container">
       <nav id="navbar">
-        <header>Design System</header>
+        <header>
+          <h1>Design System</h1>
+        </header>
         <ul>
-          <li id="tone"><a class="nav-link" href="#tone">Tone</a></li>
-          <li id="brading"><a class="nav-link" href="#branding">Branding</a></li>
-          <li id="color"><a class="nav-link" href="#color">Color</a></li>
-          <li id="spacing"><a class="nav-link" href="#spacing">Spacing</a></li>
-          <li id="typography"><a class="nav-link" href="#typography">Typography</a></li>
-          <li id="components"><a class="nav-link" href="#components">Components</a></li>
+          <li><a class="nav-link" href="#tone">Tone</a></li>
+          <li><a class="nav-link" href="#branding">Branding</a></li>
+          <li><a class="nav-link" href="#color">Color</a></li>
+          <li><a class="nav-link" href="#spacing">Spacing</a></li>
+          <li><a class="nav-link" href="#typography">Typography</a></li>
+          <li><a class="nav-link" href="#components">Components</a></li>
         </ul>
       </nav>
       <div class="spacer"></div>
       <main id="main-doc">
         <section id="tone" class="main-section">
-          <header>Tone</header>
+          <header><h1>Tone</h1></header>
           <p>SolarCloud UI tries to have a clean tone overall. The styles should match the UI, which represents emergent technology, cleanliness, and education.</p>
         </section>
         <section id="branding" class="main-section">
-          <header>Branding</header>
-          <h1>Logo Guidelines</h1>
+          <header><h1>Branding</h1></header>
+          <h2>Logo Guidelines</h2>
           <p>SolarCloud logos are available as .jpg, .png, and .svg</p>
           <ul>
+            <li>SolarCloud logos should never be stretched, aspect ratio must be maint</li>
             <li>Don’t add additional shadows or lighting effects, modify colors, or change the orientation.</li>
             <li>When positioning the logo beside other elements, please ensure there is sufficient outer padding.</li>
           </ul>
         </section>
         <section id="color" class="main-section">
-          <header>Color</header>
-          <p>This is the primary color palette.</p>
+          <header><h1>Color</h1></header>
+          <p>This is SolarCloud's primary color palette.</p>
           <div class="tiles">
             <div class="tile">
               <div class="tile__swatch background-brand-white"></div>
@@ -111,18 +114,22 @@
               </div>
             </div>
           </div>
+          <p>Header Text should be set to <code>var(--cod)</code>. While Paragraph text should default to <code>var(--mountain-mist)</code></p>
         </section>
         <section id="spacing" class="main-section">
-          <header>Spacing</header>
+          <header><h1>Spacing</h1></header>
           <p>Spacing can be applied using margin or padding. There are several available spacing sizes. Both margin and padding share the same predefined scale.</p>
           <div>
             <p>Spacing after <code>&lt;section&gt;&lt;/section&gt;</code> should normally be 100px.</p>
           </div>
         </section>
         <section id="typography" class="main-section">
-          <header>Typography</header>
+          <header><h1>Typography</h1></header>
           <p>SolarCloud's font family is Open Sans.</p>
-          <code>font: 100% 'Open Sans', sans-serif, Arial;</code>
+          <h3></h3>
+          <div class="example-text">
+            <code>font: 100% 'Open Sans', sans-serif, Arial;</code>
+          </div>
           <div class="example-text example-text--upper">
             <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span><span>i</span><span>j</span><span>k</span><span>l</span><span>m</span><span>n</span><span>o</span><span>p</span><span>q</span><span>r</span><span>s</span><span>t</span><span>u</span><span>v</span><span>w</span><span>x</span><span>y</span><span>z</span>
           </div>
@@ -130,21 +137,29 @@
             <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span><span>i</span><span>j</span><span>k</span><span>l</span><span>m</span><span>n</span><span>o</span><span>p</span><span>q</span><span>r</span><span>s</span><span>t</span><span>u</span><span>v</span><span>w</span><span>x</span><span>y</span><span>z</span>
           </div>
           <div class="example-text">0123456789</div>
-          <p>Paragraph text should be designed with scalability in mind. Always assume it's likely to wrap so that multi-line heights should be used.</p>
+          <ul>
+            <li><p>Paragraph text should be designed with scalability in mind. Always assume it's likely to wrap so that multi-line heights should be used.</p></li>
+            <li><p>SolarCloud uses a combination of sentence casing and Title Casing, depending on context.</p></li>
+            <li><p>Header Text should be set to var(--cod). While Paragraph text should default to var(--mountain-mist)</p></li>
+          </ul>
         </section>
         <section id="components" class="main-section">
-          <header>Components</header>
+          <header><h1>Components</h1></header>
+          <p>The following components are available for use through BEM classes</p>
           <div class="components-container">
             <div>
-              <button>See More</button>
               <span>Default Button</span>
+              <p>The Primary button used on SolarCloud pages.</p>
+              <button>See More</button>
             </div>
             <div>
               <span>Sunburst Button</span>
-              <button class="--red-background">Join SolarCloud</button>
+              <p>The CTA button used to denote the most important action on a page</p>
+              <button class="--red-gradient-background">Join SolarCloud</button>
             </div>
             <div>
               <span>Empty Button</span>
+              <p>The button to be used for secondary actions</p>
               <button class="--cod-text --weight-600 --white-background --mountain-mist-border">Go to PV Solutions</button>
             </div>
           </div>
