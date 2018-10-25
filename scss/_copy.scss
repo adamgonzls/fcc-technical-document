@@ -37,5 +37,4 @@ p {
 code {
   display: block;
   @include fontSize(14px);
-  margin-bottom: calculateMargin(20px);
 }
