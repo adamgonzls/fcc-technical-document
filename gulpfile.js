@@ -12,8 +12,8 @@ gulp.task('serve', ['sass'], function() {
     files: "styles.css",
     // httpd-vhosts.conf users:
     open: "external",
-    host: "fcc-technical-document.test",
-    proxy: "fcc-technical-document.test/public",
+    host: "project-starter.test",
+    proxy: "project-starter.test/public",
     port: 3000
   });
 
@@ -32,7 +32,7 @@ gulp.task('sass', function() {
     browsers: ['last 2 versions'],
     cascade: false
   }))
-  .pipe(sourcemaps.write())
+  .pipe(sourcemaps.write('./maps'))
   .pipe(gulp.dest('./public'))
   .pipe(browserSync.stream());
 });
