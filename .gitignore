@@ -3,3 +3,4 @@ node_modules/
 .DS_Store
 public/styles.css
 .publish/
+public/maps
